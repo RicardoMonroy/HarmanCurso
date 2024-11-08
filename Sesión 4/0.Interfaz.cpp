@@ -3,7 +3,7 @@
 // Definición de la interfaz
 class IFigura {
 public:
-	virtual void dibujar() const = 0;
+	virtual void dibujar() const= 0;
 	virtual ~IFigura() {}
 };
 

@@ -17,6 +17,11 @@ public:
 		out << "(" << c.real << " + " << c.imaginario << "i)";
 		return out;
 	}
+	
+	// Sobrecarga del operador ==
+	bool operator==(const Complejo& otro) const {
+		return (real == otro.real) && (imaginario == otro.imaginario);
+	}
 };
 
 int main(){
@@ -28,6 +33,12 @@ int main(){
 	std::cout << "c1: " << c1 << std::endl;
 	std::cout << "c2: " << c2 << std::endl;
 	std::cout << "c3 (c1 + c2): " << c3 << std::endl;
+	
+	if (c1 == c2) {
+		std::cout << "Los números complejos son iguales" << std::endl;
+	} else {
+		std::cout << "Los números complejos son diferentes" << std::endl;
+	}
 	
 	return 0;
 }
